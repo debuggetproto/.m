@@ -2645,21 +2645,20 @@ local Library = {
                     BorderSizePixel = 0,
                     BackgroundColor3 = Library.Theme["Accent"]
                 }):AddToTheme({BackgroundColor3 = 'Accent'})
-                
                 Items["Glow"] = Library:Create("ImageLabel", {
-                    Name = "\0",
-                    Parent = Items["Liner"].Instance,
-                    ImageColor3 = Library.Theme["Accent"],
-                    ScaleType = Enum.ScaleType.Slice,
-                    ImageTransparency = 0.800000011920929,
-                    Size = UDim2.new(1, 8, 1, 8),
-                    AnchorPoint = Vector2.new(0.5, 0.5),
-                    Image = "http://www.roblox.com/asset/?id=18245826428",
-                    BackgroundTransparency = 1,
-                    Position = UDim2.new(0.5, 0, 0.5, 0),
-                    BorderSizePixel = 0,
-                    SliceCenter = Rect.new(Vector2.new(21, 21), Vector2.new(79, 79))
-                }):AddToTheme({ImageColor3 = 'Accent'})
+    Name = "\0",
+    Parent = Items["Liner"].Instance,
+    ImageColor3 = Library.Theme["Accent"],
+    ScaleType = Enum.ScaleType.Slice,
+    ImageTransparency = 0.9, -- Можно немного поиграть с прозрачностью
+    Size = UDim2.new(1, 0, 1, 0), -- Обязательно меняем Size
+    AnchorPoint = Vector2.new(0.5, 0.5),
+    Image = "rbxassetid://6023420389", -- Новое изображение!
+    BackgroundTransparency = 1,
+    Position = UDim2.new(0.5, 0, 0.5, 0),
+    BorderSizePixel = 0,
+    SliceCenter = Rect.new(Vector2.new(10, 10), Vector2.new(22, 22)) -- Подгоняем под новое изображение
+}):AddToTheme({ImageColor3 = 'Accent'})
                 
                 Items["Pages"] = Library:Create("Frame", {
                     Name = "\0",
