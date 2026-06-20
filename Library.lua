@@ -2620,7 +2620,7 @@ local Library = {
                     BackgroundColor3 = Library.Theme["Background"]
                 }):AddToTheme({BackgroundColor3 = 'Background'})
                 
-                --[[
+                
                 Items["Title"] = Library:Create("TextLabel", {
                     Name = "\0",
                     FontFace = Library.Font,
@@ -2634,7 +2634,7 @@ local Library = {
                     BorderSizePixel = 0,
                     AutomaticSize = Enum.AutomaticSize.XY
                 }):AddToTheme({TextColor3 = 'Accent'})
-                --]]
+                
                 
                 Items["Liner"] = Library:Create("Frame", {
                     Name = "\0",
@@ -2744,7 +2744,7 @@ local Library = {
                 end
             end)
 
-            -- the title animation logic below
+            --[[ the title animation logic below
             local OffsetX = 8
             local OffsetY = 12
             local Width = 7 -- this would be the gap between each letter
@@ -2785,7 +2785,7 @@ local Library = {
 
                     Value.LetterInstance.Instance.Position = UDim2.new(0, Value.X, 0, Value.Y + OffsetY)
                 end
-            end)            
+            end)            ]]
 
             Window:Center()
             return setmetatable(Window, Library)
