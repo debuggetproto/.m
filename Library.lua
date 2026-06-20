@@ -2662,15 +2662,15 @@ local Library = {
                 }):AddToTheme({ImageColor3 = 'Accent'})
                 
                 Items["Pages"] = Library:Create("Frame", {
-                    Name = "\0",
-                    Parent = Items["Background"].Instance,
-                    AnchorPoint = Vector2.new(1, 0),
-                    BackgroundTransparency = 1,
-                    Position = UDim2.new(1, 0, 0, 0),
-                    Size = UDim2.new(0, 0, 0, 30),
-                    BorderSizePixel = 0,
-                    AutomaticSize = Enum.AutomaticSize.X
-                })
+    Name = "\0",
+    Parent = Items["Background"].Instance,
+    AnchorPoint = Vector2.new(0.5, 1),
+    BackgroundTransparency = 1,
+    Position = UDim2.new(0.5, 0, 1, -35),
+    Size = UDim2.new(1, -20, 0, 30),
+    BorderSizePixel = 0,
+    AutomaticSize = Enum.AutomaticSize.X
+})
                 
                 Library:Create("UIPadding", {
                     Name = "\0",
@@ -2681,23 +2681,24 @@ local Library = {
                 })
                 
                 Library:Create("UIListLayout", {
-                    Name = "\0",
-                    Parent = Items["Pages"].Instance,
-                    VerticalAlignment = Enum.VerticalAlignment.Center,
-                    FillDirection = Enum.FillDirection.Horizontal,
-                    Padding = UDim.new(0, 8),
-                    SortOrder = Enum.SortOrder.LayoutOrder
-                })
+    Name = "\0",
+    Parent = Items["Pages"].Instance,
+    VerticalAlignment = Enum.VerticalAlignment.Center,
+    HorizontalAlignment = Enum.HorizontalAlignment.Center,
+    FillDirection = Enum.FillDirection.Horizontal,
+    Padding = UDim.new(0, 12),
+    SortOrder = Enum.SortOrder.LayoutOrder
+})
 
                 Items["Content"] = Library:Create("Frame", {
-                    Name = "\0",
-                    Parent = Items["Background"].Instance,
-                    BackgroundTransparency = 1,
-                    Position = UDim2.new(0, 0, 0, 30),
-                    ClipsDescendants = true,
-                    Size = UDim2.new(1, 0, 1, -30),
-                    BorderSizePixel = 0
-                })
+    Name = "\0",
+    Parent = Items["Background"].Instance,
+    BackgroundTransparency = 1,
+    Position = UDim2.new(0, 0, 0, 30),
+    ClipsDescendants = true,
+    Size = UDim2.new(1, 0, 1, -65),
+    BorderSizePixel = 0
+})
 
                 Window.Items = Items
             end
@@ -2808,19 +2809,19 @@ local Library = {
 
             local Items = { } do 
                 Items["Inactive"] = Library:Create("TextButton", {
-                    Name = "\0",
-                    FontFace = Library.Font,
-                    TextSize = Library.FontSize,
-                    TextXAlignment = Enum.TextXAlignment.Left,
-                    Parent = Page.Window.Items["Pages"].Instance,
-                    TextColor3 = Library.Theme["Inactive Text"],
-                    Text = Page.Name,
-                    AutoButtonColor = false,
-                    Size = UDim2.new(0, 0, 0, 20),
-                    BackgroundTransparency = 1,
-                    BorderSizePixel = 0,
-                    AutomaticSize = Enum.AutomaticSize.X
-                }):AddToTheme({TextColor3 = 'Inactive Text'})         
+    Name = "\0",
+    FontFace = Library.Font,
+    TextSize = 11,
+    TextXAlignment = Enum.TextXAlignment.Center,
+    Parent = Page.Window.Items["Pages"].Instance,
+    TextColor3 = Library.Theme["Inactive Text"],
+    Text = Page.Name,
+    AutoButtonColor = false,
+    Size = UDim2.new(0, 0, 0, 16),
+    BackgroundTransparency = 1,
+    BorderSizePixel = 0,
+    AutomaticSize = Enum.AutomaticSize.X
+}):AddToTheme({TextColor3 = 'Inactive Text'})
                 
                 Items["Page"] = Library:Create("Frame", {
                     Name = "\0",
@@ -3030,11 +3031,13 @@ local Library = {
                 }):AddToTheme({BackgroundColor3 = 'Background'})
                 
                 Library:Create("UIPadding", {
-                    Name = "\0",
-                    Parent = Items["Text"].Instance,
-                    PaddingRight = UDim.new(0, 4),
-                    PaddingLeft = UDim.new(0, 4)
-                })
+    Name = "\0",
+    Parent = Items["Section"].Instance,
+    PaddingTop = UDim.new(0, 4),
+    PaddingBottom = UDim.new(0, 4),
+    PaddingLeft = UDim.new(0, 6),
+    PaddingRight = UDim.new(0, 6)
+})
                 
                 Items["Content"] = Library:Create("Frame", {
                     Name = "\0",
